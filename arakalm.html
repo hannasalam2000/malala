@@ -1,0 +1,1420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .responsive {
+          width: 100%;
+          height: auto;
+        }.header {
+  text-align: center;
+  padding: 32px;
+}.row{
+  display: flex;
+}
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+ padding: 5px;
+}
+
+
+        </style>
+  </head>
+ 
+  <body>
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-light bg-light" >
+      
+      
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);margin-left: 500px; " aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">Visits since 1 Apr 2022</li>
+              <li class="breadcrumb-item">Visits since 1 Jan 2007</li>
+            </ol>
+          </nav>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIPDxUQDw8VFhUVFhgWFxUVFRYYFhEXFRIWGBUWFhcYHSggGh4nHRYWIjElJSorMDEuGB8zODM4NygtLisBCgoKDg0OGxAQGy4lICYtLS8rLS4tLS0tLS0tLy0tLS01LS0tLS8tLS0tLS0tLS01LS0tLS0tLS0tLS0tLS0tLf/AABEIAOAA4AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAQYEBQcDAgj/xABIEAACAQMCAwUEBQcJBwUAAAABAgMABBEFEgYhMUFRYXGBBxMikRQyUqGxIyQzNEJycxVikqKys8HC0TVTY3SC4fEWJYOTw//EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAA5EQACAQICBggEBQMFAAAAAAAAAQIDEQQxEhMhQXGhBTJRYYGRsfAUIlLBM3Ki0eE00vEkQmKCkv/aAAwDAQACEQMRAD8A7jSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBStfe6vbwHE06Ifsswz8uteljqMNwMwzJJjrsYHHmB0p3FdJXtfaZlKwdU1OG2j95PIEXsz1Y9ygcyfKq7D7QrNm2n3ij7bJ8P3EkfKobSzM6mIpU3ackn3suFK8opVdQyMCpGQQcgg9CCOtetSbClKUApSlAKUpQClKUBFKUoBSlTQEUqaUBFKmlAKippQCoqaigFYGsRSvA628gSUj4XIyF5jPlyyM9mc1n0oQ1dWOAanaSQzvHPn3in4sncSTzzu7cgg58a8rad4nDxuyMOjKSCPUVa/aFo3upnuHuFLTPlYwp3bQoGSc8gMAVT65mrM+Pr0nRquPY9m3bbdlvMnUNQluH3zys7YwCxzgdwHQelZdlw9dTxe+hgZ05jI2c8HBwucnn3CtXW80fiu6s0EcUgKDJCOoIGTk4PI9T30Vr7RSdOU71m7d2d/EvPs1gnS3O+QGPcwEZBDROrEMOfYeuOw+Zq6VV+DeKBfhldAkqYLBT8Lg8twzzHPljn2c6tFbxyPqcJoamOg7rt95cBSlTVjoIqaUoBUVNKAippSgFKipoBSopQE1FKUBNKilAKUpQCpqKUApSlAcM4unke+nMmch2UA9iqcIB4YwfWsvirRI7OK2KMxeWMs+SMZwhyvLkPiI9Kt3EfCJu9Q3ncsckfN1AO2RBhd4PYRj5daq/tB3LcRRM273MEaZxgMQpLMB2Z/wrBq1z5zEYd041ZzWbVn439CsVZuBdFhvZpI5y3JNyhTg53AE+mR861+j6StxDcvuIeBEdRywy5O/PkBVt9m2nwtucoyXMJPPLDcsiHaWU8j2/dURV2jHBYdyqwckmnfPfa9/HeazgFfcaqYgc8pEz9oLk5/qCus1zLg3RpINWeOUhjErMXHRt6rg+ZDnl4Gum1rDI9no2LjRaat8z2dntipqKVc9AmlRSgJpUUoCaVFKAVNKUAqKUoBStJr3E1vYsqzFtzjICrkgZxuPh/pW1tp1lRZEOVcBlPeCMg0KKpFycU9qzXYe1KVNC5FKUoBSpqKAUqaUBFcz9qmmMJEuh9Vl2N/NZclT6gn+j410ysPVbBLmF4ZRlXGPEHqGHiDg+lVkrqxz4qhr6Th5cdxQvZfpBJe6YgoVaMAHOSSNwdfID51vddP0TUILsckmzBN3cx+TY/L5LWVwVoZsrYo/12dixByCAxVCO7KgH1rK4r076VZyxYy23cv7yHcvzIx61Cj8pz0aDhhVFL5l81v+Wf8AHAzILCOOWSVV+OXbvOTz2LtUeAx+JrMrScI6p9Ls45CcsBsf99Dgk+fI+tbyr3vtO2nKMoqUcnt89v8AnvIpSpoXFRSpoCKVNRQClKmgFKUoCKVNRQHKvat+uR/wV/vJK6Bwp+oW/wDCX+yK5/7Vv1yP+Cv95JXQOFP1C3/hJ+ArKPWZ5eG/ra3BfY2tKVNanqEUpSgFKmlARU0pQEUqaigFKmlAUXhaT6Jqd1Znkjn3kY7By3YH/S39SrzXPePX+iX9rejpzDeIQjd6lXI9K6EDkcqrHejkwr0XOl9L5PavuKVNKsdZFKmlARSppQEVNKUBFTUVNARSlKA5V7Vv16P+Cn969dA4U/ULf+Ev9kVz/wBq365H/BX+8krUy8U3TxR20TFERFUBMgyYGMlhz9BgVjpKMmeF8TGhiqrld3tZLfkdmluET67qvmQPxr6jcMMqQR3g5FcLXQ53+IpzPaWGT5/Fmui+znSZLaCRpHG12BVAchduQzHsyeX9EVWniqdSWhFpvudz0qNXEyktZRlGPa7r1SLlWHc6lDEcSzxoe5nVT8ia5vxfxs8zmG0crEDguvJpPLtC+XM/dWv07ga8nXcUWMHn+UbaTnt2gEj1ArRz22Suc8+kG5uFCGnbN7vftHXLa8jmGYpFcd6Mp/A1kVxbUuF7yx/K7ThefvY2J2+JIwy+eKtfA/GLTuLW6OXP6OT7eBna+O3HQ9vn1lTu7MtRx96mrqxcXu7PfLvLm2oQiQQmZBIeke4bzyz9XOelfc17FGdryop7mYA/ImuKcUyEahcMGIIlbBBIIweRB7MYFbOx4EvLhBKxRd/xYkZt5z2nAOM+POo03uRlHpCrKcoQp3s3v3eR15GBGQQR3jmDXxPOka7pHVVHUsQAPU1SOAeHruzmkM/wRbcbQ4YO2RhgAeWADzODzqva3pWo3t46SROcMdueUaLnkVY/DjGOnM+dW0tmRvPGTjSU9W9Ju1jp9tqtvK22O4jdu5XUn5A1nVxnVuCrq1iMzbHVebFGJKAdpBA5eWatHs74meYm0nYswXdG5OSQOqse0jqD3Z7qhS22aK0cdJ1NXWhot5d5le1SDdZK/wBiQfJgQfv21ueD7339jC567dh842Kf5c+tePH0O/TpvAK39GRSfuzWr9ldxus3Q/sSHHkyg/jmmUy19HG2+qHo/wBi61i3WoQwfppkjz9t1XPzNYvETTi1lNqMy7fhx16jO0dpxnHjXLNO4Rvrws5Urk83mJUsfUFj54qZSadki2JxM6clCnByb8jr1pexTDMMiOO9GVgPkayq4jqWk3elyq5O0/sSI2VOOo6fcRzrqXCWtfTbVZSAHB2OB0DDtHgQQfWojO+xkYbGOrJ05x0ZLd7995vKVFKudwpSlATSlKAUpSgOU+1b9cj/AIK/3klY3DtiEjEpHxP29y88AefWsj2r/rkf8Ef3klfWjTh7dCOz4T4FTgfdg+teF0zKSpWWTe33xOboenTl0pUlLNK8eOxN+H3M2szXb8waMdpwZGMYPgWYt/VVhWHX3xVEW0dWH7Eu4+AJdfxYV53Q39RL8j9YnudOtrByaz/hmJ7L9HWSR7qQA7CFQHscjLN5gYx5nurpU86xqXkYKqjJZjgAd5Jqj+yi7Uwyw5+JWDY71ZQv4r94rScYT3l3etaBG2q2EjAIDAdHY9Dnrk8h86+pT0Yo+WoVo4fCQlFXb7O09+LuOTMGgtMrGchpOjSDtCg/VX7z4duTwNwhIsiXdwCu34o4z9Yn7T/ZHbjr/juOFeCo7XEs+JJuo+zGf5oPU+J9KuFSotu8i9DCVKk1WxD27luXv/JxTV1B1dwRkG4wR3guM12uuLat/th/+Y/ziu01FPeR0b1qv5n9zxubhIkMkjBVUZLE4AFUm/8AaVCrYhgeQD9pmCA+IGCfnisT2rag2YrYHCkF2H2jnamfLDH5Vzx5NrfD17wSOhIGcHnVatbQO/DYfF9IYqWHwrUdFXlKWSvuyfpxsdb0DjeC8kEDxNGzggAkMjfCSVzgdgPUVRdBX6Lq8aD9iYx+hYp+BquLKcjz8SeXIda2+jyM9/AxJLNJGST1OWUknxzWca2m+BTpnonE4GnQniJRlJ1LLRvlse9La9+zZs2s7DxQM2Nx/Cb8DVO9kLcrod3uj8/e/wClWrjSbZp8571C/wBNgv8AjVU9kA53X/w//rXQ+svfac1d/wCupLul6MuOt65DZJvmfr9VVGXfHcP8TyqpSe05d3w2ZK95kAb5bSPvqs8QTtfam6luW8xr/NRMjl8i3masScP2wXb7kHxJO4+taU6c6t9G1kclXHV5zapNRSdsr387mVr2rxanpczxqVaJkYq3VTvHMY6gqWFYfslnO+4j7CEYeYLg/iPlXzf2cdvZzLEu0FTnmTuJIAyT17K8vZMPzib9wf2x/pValNwnG+bRWFWU8XSlLO1nzOoUpSpPeFKUoBSlKAUrV6jrUFtyllAP2RzPyHT1rx0/iK3nbYrlW+y4Kk+RPL0rRUpuOkou3bYweJoqerc1pdl1f3zKH7Vv1yP+CP7ySqvYXz27ZXoQCV+0Ow/967BxDwvBfMrzbgyDG5CASuc7TkHx+dZF9oNvPCsMsIKIoVOoZAAANrDmOgrkqUFUTUtqZwTwNf4iVanPRezRfhbw53yObRcQwkfFlT8x86vegJFd6fsJ3JJvU94yx7+hHWtTcezW3J/JzuvgQrf6VZdA0dLKAQxkkZLFm6sx6nl07B6Vy4Xo6nh6mnG+Vs79n7dp6UMXjqq1eJUdHtWd/Tkjk9zBc6ReAg4IztfHwzL28u0dMjsPoau2ne0a3dR79HjbtwN6nyI5/dVr1DT47mMxzRh1PYezxB6g+Iqp3Xs2t2OY5XTwO1gPLkD8zXZoyj1TzlhcTh2/h2nF7nu98Tw1X2kxqMWsJc/af4VHkBzP3VaOGdW+mWqTlNpbcCM5GVYqcHu5VorH2dWqHMrPL/NJ2r/V5/fVtggWNAiKFVRgKowAO4CrRUs2dGGjitNyrNW7F7+5xvVh/wC8P/zH+cV2qqvNwXA959LLNneJCnLaXGDnPXGRnFWikI2vcYLDzpOelvldcDn3tT0l2Ed0gJCAo+P2QSCreWSQfMVzaVQe3nz8e0nGPCv0EJkclA6sehXIPLtBFVbUvZ7aysWjZ4iexTlPRW6ehxVKtHSNqFbF4LEPE4Nq8laSlk/Jr1Xk7HJY0A55yfTORjsx99bXhaPdfW4/4qH5OD/hXRLD2d2sbbpC0vgTtX1C8z8697Dge3guxcoz4Ullj/ZUnx6kDPIVWFHRyOfpCp0j0jWhVxLj8r2RWSV7vtzsr7W3s7EePtRuNljs/wB5Io9Fy/4qKxfZPBiCWTH1nC+exSf89WLiTQY7+NY5HZdrbgVxnOCCCD2Vk6LpaWcKwR5wM8zjLEnJJrW3zXLfDzeL1u5Ky4+2cr4ssXsNQMgHws5kjPYwY5ZfQkjyx31t4eKLYrlmZT9kqxPzAxXQdS06K5jMc8YdT2HqD3gjmD4iqlN7NLcnKTSKO44bHkcCrwnUp30MmcVbAVYTbo2ae57im8QcQfSB7uMEJnJz1fHTl2CrB7JF/K3B7kQfNn/0rew+z6zWNkIdmYY3s3xJ3FQAF+YNbDhbhqPT1cI7OZCMswA5LnaAB5n51R6cp6UiMNga8K8ak7b9+Wxqxv6UpVz3LClKUINA0Goc8TQ4zyOOePLbXkNFupP098cdqxqF+8Y+8GrJStlWkskvJHM8JB9Zyf8A2lbk1fxNTp2gwW/NI/i+0x3HPeM9PTFe2paTDcjE0YJ7G6MPJhzrYVpNf4kgsDH9J3qshIDhCyqRj6xHTr49DVYupOd1dy5lnSowpuDilDssrGKNLvLc/m1wJEHSOQcx4Bv/ABUrrlyn6ewfzjbeD6AH8a3VjfRTpvglSRT+0jBh91ZNWdW/Xin5p8rc0ZrC6P4U5Jdl1JfqTa8GkV48TE8ls5ie7b/5r5Go38v6OzEY+1IwP3cj91WOlNZBZQXi2/2J1FWXWqvwUV9m/KxXF0S5l53N6SPsRjaPnyz6ijaJcQnda3bfuS/ED645fL1rK1TiiztOU90in7IJdx5qgJHyr00jiG1vB+bTq57V5hx4lGAbHpV9ZW0dK3y/lVvT+Snw1C+jd6XbpvS873+xgjV7yPlNYlv50bA5/wCkZr7/APU2OtpOD3bP+9WClU06bzh5Nl1RqxyqvxUXzSRXW1m6k5QWJ/ekbAHocfjXz/I1zP8Ard0dv+7jGB5E9vqDVkpTXW6kUu/N+bI+E0vxJyl3ZLyja/i2V9+ErYKAishHRwzZB78E4rzWHULf6rrcqOxsK/zP+JNbmDUoJHMaTxs46orqWHmAc1l0188pbeO3+V5hYKittL5H2x2csn4pldXiOReUtjKh8PiHzwKf+pGblHZTMfEYHz51YqU06f0c2Tqa1ra1/wDmN/S3IrZk1GfkqJbr3sQzenUfcKDhKNhmeWSSQ/t5xj90HP35qyVhajqkFuu64mSMdm9gCfIdT6VKrTTtTVuC2+e18yrwdJq9Vuf5ns8tkV5GpFje2/6GYSoOiPgEeAbt+Youu3K8ptPkB70bcD8h/jW30/Uobld0EySDvRgceYHT1rMqHV3Tim/J8rehKwzW2nUklxUl+q752K8dfmP1NPmPmSo+8V8mXUZhhY44B3sQxHljI+6rHSmtiurBeN36u3In4ecutUlwVo80r8ytrwor/FcTySP9vONv7oOa+hY30P6G5WRexZRg/Mcz8xW2t9ShlkaKOZGdPrKrAsnZzA6Vm1Lr1Hslt4pcuwhYOitsLp9qbTfF7/G5Wjqd+vI2AbxEi4/E19JqF+5AFiqDIyXkBGO3pg/casVTUa2P0L9X9wWGqX/Fl+j10bilKr3FXFEWnIgZHkmmbZDBHgyTMSByzyAGRknpkd4FYnWWGvC5gSRSkiKytyKsAVPmD1quajqOpQ2puDb2xcbfzYPIT8bhQPf4AJ5j9jHjVnjzgbsZxzx0z24oCpXnAFsX95avLbSfahcgf0T2eAIrx/kXWIuUOqRSD/ixAH5hWP31dqxb+TZC7Ftu1GO7AO3Ck7sHly6862+Iqb9vFJ83tMtRC91s4Nr0Kl/JWtvyfUYEH/DjDH+tGPxr6PBEsw/PNUuJR2qhEaHwK5Ir44G1i6n0X6be3KLI6yyCWRFEcKAsI2ZV2gqNu7rkg9a3HA2oT3WnQT3igSyKWOFKhhuOxtp6bl2tjxqfiJ7rLgkudiNRDfd8W39ydL4QsbX9Fapn7Tje3oXzj0xXjrHBVndHe0Xu5OokhPu2B7+XInxIqy1q+INbhsLZ7q5fbGg7OZYn6qqO0k8hVNbU0tLSd+JbVQto2VuBW/5C1W2P5rqKzIOiXC5OP38MT8xX39O1teRsrZ/FXIHyL19XnEl5DYHUZbSNY1Aka23EziEsPiL8lDhTu2Y8N2atVhdJPEk0TbkkRXVvtKygqfkatrr9aKfhb0sRqbZSa8f3uVMvrsvIJaQDvJZiPvYfdUHgye4/2hqU0oPWOPEcZ8CByPyFXWlNfJdVJcEvXMalPNt8X9suRUbj2e2DRhUiaNl5rIkjbwe/LEg+o8q8F0TVbb9W1BJ0HRLhTnH74yT8xV2pT4ip/ud+O31GohuVuGz0KT/LGspyfS4n8Y5kUH0Zya+l1XWZOS6dDH4yShgPRWzVk1rVYbK3e5uXCRxjLH1wAB2kkgAd5rU6TqV7dwfSEtooVcboo52YyyKRlTIU5RZ7hvwD6U1sfoj+r+4jVS+t8v2Nf/ImrTn841FIVPVbdOf9MhSPmay9P4Bsom3yo08h6vOxfPmv1T6g1teGdSku7OK4lgELSLu92H37VJO07tozkYPTtrbUdedrJ2XckvQnUwvd7eO0qeocA2cr+8jV4JPtwOUx5LzA9AKxzwzqMXKDWXI7BLErn1Zic/KrpSir1Mm78Un6ph0IblbhdehSzo+snkdVjA7xAmf7FfB4Imn/AF/U5pV7UT8mh8CMkH5Vd685JAqlmIAAJJJwAAMkknoKn4ie6y4JLnYjUQed3xbf3NZovD1tZAi2hCZ6tzLNjvZsnHh0rb14wTLIqujBlYBlYHIYEZBB7QRXtWMpOTu2axioqyFKUqCRXLtLzd8XXLS8xZ24WIH9kssXxD/7ZfmK6jVSv+FHXUxqllMqStH7qaORS0c6cueVIKN8Kc+f1Ry65Am74uaPU000WbtI6+8DiSPYIwWBdueVHwnlju768uJdama/t9Ks32SSqZp5sBmgt0OPgDZG9yNoJBx1x3e+j8MPHqU2p3E4eWWMRIiJhIIwVO0MSSxJXOeXMnlXjrHCcsl/Je21ysTTWv0VyyFmjHvA3vY8EDdjIweWcHwoDw9n/ET3FrdzXMu6KC6uEjlYAFreMBlZiAAcAnnjs7xVP4m1+8vNLe79+0K30gtbK0AT8pHI+x5JiVLFmXdjBAX4cdav03CEaaQ+lWre7VoWjDkZJLfWZ8YyWJOcY61pLr2fTyQ2Sm/US2jx4kWBdqJEm1EhjYkA5wSWzuIBIwqqALnp+lRw2sVrtDJEiIAwBB92AAcHxANVrjjW3iuLayFw9qt0JFW6RUbZMpQRRsHBG07jnoT8OCBmrfbQiNFQEkKAMsSWOBjLE8yfGq3qXDM13OwurlJLT3sU0cPucSwvFtIVZg31SVOfhJIYgEdaAssCFUUM25gAC2ANxA5nA5DPWub+0dDdaxpVg/6JpGndexzGNwB8NqOvk5rp1VviThv6TcW15C4S4tWYozKWR0ddskbgEHmOhHSgNZ7YdSW30acH6022FR2sXYbseSBz6V5X8s+k8OoVkSOW3tkDM67trhANqr0LFyFGeQznBxg7G44Xe8vIrq/kV1t/igt4wfdrJyzLIzHMjchjkAMdvOvfjrhxtTtBbJMIvyschLJvVghztZcjIzg9eygNHpOuXv0nTtPdg8rWxur12A3KpGEUYwAd5x6Cs7Qb+7fTZ7iedQxluGjldBtit0lKq4QY3AIrMoPX4cnnmvheC5V1CS6W+YJPCkU42flpSrEkpIDiIEHHwjkOmDgjbcVaAbvT3sYJBArhEyq8liV13Io6DKgr60BzuHiXUJNLtJEvHE1xcpFExjj33BeYl9w24EaINpIAywPPaBu7FVI1LgUy3lpLFcmG3s4fdRxRr+UG4FXKyE/BlNo3AbhjkQeYu4FAcy9qy/SdQ0qwf9DNOzyL2Se7aMBT4bWcf9VdNqr8acKfyiIZIpzDcW0nvIZQu4KcqSrLkZU7V7f2R2ZB9ZtLvbhoRc3MSxIweWOCNwbgrzUF2c7U3AErjmBgnBIoDE4y1uWKW20+zIW4u3IDkA/R4YxmWUKRgsB9UHlnyxXjwNrUs93qNu8jSxW06JFI23cSUIlQlQM7WTOf5/lWVrnDEsuoRahbTokscEkGJELqA+SsigMOalm5do5ZFZnDnDcenWht7Zjvbc7TPzeWVxzkfvOccu4CgKXHxlc28Wp31zOrxxS/RrWJEAQzqDuCnG5wGIBY9QjHA6Cy3dxdW2iiWe5C3EcAeaYorMpC7nCJgKX/AGVyMZIJB6HQRezGUadDZfT/AI0mEjSGIEKu8yMsak82L7CWYnO3HTlVj4m4S+m2UdiLhlj97G8zNlpLhFYu6lsjDM2DnoMch2UBULbXtQePSl+ln3lzKgwEj/OIUG+6mkymQoGFQLtyBuJO4Bd57VmeWK2sIZnR72cQMi7MPCeczNld2FUfskdeeRyrKuODXk1Vb03ZSGKFYY4I12kKCCy78/CCRz2gHHLIHX71/hB7zUYbw3jRxwxNGI41Acly3vCspPwblIUkDcMciDzoDD47kudN0Z2tr4qYQPy0iRNIRkLHEioioMkqN2CQAepORsuH49QeY3VzMDDJbrstdqq0cmc5dsfW2gZ54y5GMKCfbizhkagtvC0m2GKdJZI8Z98sanbH5ZxnwqyUBy/+XNQik1C0luQ84+hmBlRQInu3CNGgA5qpPItk4Uk9tdQqhaJo7XGt3moMfyKMkMQ7JJYYtjv5IXkQfzi3aoq+0ApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUArTa/oCX3uveTTx+6f3g9xK0RY7SpVmXnjBPQg+PWtzSgPK3hWNAiKFVRgAdABXrSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUB//Z" alt="" width="70" height="54" class="d-inline-block align-text-top">
+         Keralatourism.<span class="barr">Org</span>
+          </a>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           
+            <div class="container-fluid">
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">EXPERIENCE KERALA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">WHERE TO GO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">WHERE TO STAY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">THINGS TO DO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">E-BROCHERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">E-NEWSLETTER</a>
+              </li>
+              </ul>
+              </div>
+              </div>
+             
+              </nav>
+              
+                  
+      </div>
+    </div>
+    <img src="https://www.keralatourism.org/images/sabarimala-kt-inner-banner-desktop-2.jpg" alt="Nature" class="responsive" width="600" height="400">
+
+        
+              
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+          <div class="col-md-12" style="text-align: center;font-size: 25px;color: black;">
+              <a class="font" style="color: black;" href="#"> Travel Desk| How to| What's New| Festivals| Media Room|Affairs Subscribe</a>
+          </div>
+          <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+              
+              <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Aralam Wildlife Sanctuary</h1>
+             
+           </div>
+           <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                </a></li>
+                <li class="breadcrumb-item active"><a href="beaches.html">Wildlife
+
+                </a></li>
+                <li class="breadcrumb-item" aria-current="page">Aralam Wildlife Sanctuary</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-9">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://www.keralatourism.org/images/destination/large/aralam_wildlife_sanctuary20131106121109_140_1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://www.keralatourism.org/images/destination/large/aralam_wildlife_sanctuary20161219101850_140_1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://www.keralatourism.org/images/destination/large/aralam_wildlife_sanctuary20161219101850_140_2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                          <p>Spread over a 55 sq. km area of forests on the Western Ghats, the Aralam Wildlife Sanctuary is among the finest of its kind in Kerala. It plays host to an exotic array of flora and fauna and is among the most picturesque locations in Kannur district. The entire area is covered in tropical and semi-evergreen forests and is a truly riveting sight.</p>  
+                          <p>One can catch sight of herds of elephants, gaur, sambar, spotted deer, barking deer, Nilgiri Langur, Hanuman Langur and the Malabar Giant Squirrel. It is also famous for the vast amount of butterfly species found here. Most of these are endemic to the Western Ghats. The forest is peaceful and many trekking options are available as well.</p>
+                          <p>Aralam village itself houses the famous Central State Farm, a government of India initiative built in 1971. This is one of the main production centres of hybrid coconut seeds in the country. A visit to the sanctuary is incomplete without visiting the great Katti Betta, the tallest peak in the area, which is 1145 high.</p>
+                          <h1 class="team" style="font-size: 20px;">Trekking @ Aralam</h1>
+                          <p>Day visit to the sanctuary is the standard activity here, but the place also offers interestingly trekking opportunities like trek to Ambalappara, or to Meenmutty falls. Ambalappara trek is over three days \where overnight stay will be at Ambalappara watchtower. The Meenmutty is a one-day package and you will be taking to the waterfalls in a jeep along with a guide. To know more about Aralam Trekking, visit</p>
+                          <h1 class="team" style="font-size: 20px;">Contact Address:</h1>
+                          <p>The Wildlife Warden</p>
+                          <p>Aralam Wildlife Division</p>
+                          <p>Iritty P.O</p>
+                          <p>Phone: +91 490 2493160</p>
+                          <p>Mobile:9447979101</p>
+                          <p>E-mail: ww-aralam@forest.kerala.gov.in</p>
+                          <p>Website: www.aralam.com</p>
+                          <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                          <p>Nearest railway station: Palakkad, about 10 km</p>
+                          <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                            <button type="button" class="btn btn-light">wildlife</button>
+<button type="button" class="btn btn-light">Sanctuary</button>
+<button type="button" class="btn btn-light">Trekking</button>
+<button type="button" class="btn btn-light">Forest</button>
+<button type="button" class="btn btn-light">Kannur</button>
+<button type="button" class="btn btn-light">Malabar</button>
+</div>
+</div>
+</div>
+<div class="cotainer">
+    <div class="row">
+        <div class="col-3">
+            <img src="https://www.keralatourism.org/images/picture/thumb/Watch_the_waves_204.jpg" alt="Snow" style="width:100%">
+            <div class="tt" style="background-color: rgb(201, 215, 228);">
+                <a href="#"> Physical Fitness and Mental Stability</a>
+                <p>what is yoga, why yoga, ashtanga yoga, 
+                    patanjali yoga,
+                    perfect yoga posture learning,
+                     learn online</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="https://www.keralatourism.org/images/picture/thumb/Setting_out_for_the_day_s_catch_206.jpg" alt="Forest" style="width:100%">
+            <div class="tt" style="background-color: rgb(201, 215, 228);">
+                <a href="#"> Kalaripayattu – the marital artform of Kerala</a>
+                <p>what is yoga, why yoga, ashtanga yoga, 
+                    patanjali yoga,
+                    perfect yoga posture learning,
+                     learn online</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="https://www.keralatourism.org/images/picture/thumb/Kappil_beach_Kasaragod_208.jpg" alt="Mountains" style="width:100%">
+            <div class="tt" style="background-color: rgb(201, 215, 228);">
+                <a href="#"> Physical Fitness and Mental Stability</a>
+                <p>An exclusive website
+                     which caters the information
+                      about Kalaripayattu, the ancient
+                       existing martia</p>
+            </div>
+          </div>
+          
+          </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2144-profile-2845-20180622185355.jpg" class="card-img-top" alt="...">
+                    
+                        <div class="card-body">
+                          <a class="card-title" style="text-decoration: none;" href="#">JK Residency Kelakam</a>
+                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                          </div>
+                       </div> 
+                      </div>
+                      </div>
+                      </div>
+                      <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h2 class="team" style="font-size: 20px;">Location</h2>   
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9">
+                            <div id="googleMap">
+                                <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.93857,75.845375&amp;aq=&amp;sll=11.93857,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.93857,75.845375&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                       
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                      yes
+                                            </label>
+                                            </div>
+                                          
+                                            <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                     No
+                                            </label>
+                                          </div>
+                                          <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                          For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </nav>
+                                
+
+                                    <div class="container">
+                                        <div class="row">
+                                        <div class="col-md-12">
+                                    <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+              
+                                        <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Vadakara Sand Banks Beach</h1>
+                                       </div>
+                                       </div>
+                                       </div>
+                                     </div>
+                                     <div class="container">
+                                        <div class="row">
+                                        <div class="col-md-8">
+                                     <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                          <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                          </a></li>
+                                          <li class="breadcrumb-item active"><a href="beaches.html">Beaches
+                          
+                                          </a></li>
+                                          <li class="breadcrumb-item" aria-current="page">Vadakara Sand Banks Beach</li>
+                                        </ol>
+                                      </nav>
+                                      </div>
+                                      </div>
+                                      </div>
+                                    
+                                    <div class="container">>
+                                    <div class="row">
+                                    <div class="col-md-9">
+                                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                              <div class="carousel-item active">
+                                                <img src="https://www.keralatourism.org/images/destination/large/vadakara_sand_banks_beach_kozhikode20150811091005_141_1.jpg" class="d-block w-100" alt="...">
+                                              
+                                                  <p>Vadakara Sand Banks Beach is where locals and tourists throng to view the confluence of the Kottakkal River and the Arabian Sea. This beach strip is famous in Kozhikode for its secluded and calm air that helps people relax. The beautiful sunsets here are a perfect way to usher in the end of the day. Vadakara nearby is famous for being the birth place of Thacholi Othenan, the legendary hero of the Vadakkanpattu (ballads of North Malabar). Many famous temples here are dedicated to him and the martial art form of Kalaripayattu has many exponents here. This sleepy hamlet has something for everyone and is a must visit place in Northern Kerala.</p> 
+                                                  <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                                                  <p>Nearest railway station: Palakkad, about 10 km</p>
+                          <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>
+                                                
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                                 </div>
+                                                 </div>
+                                                 </div>
+                                                 
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <button type="button" class="btn btn-light">wildlife</button>
+                        <button type="button" class="btn btn-light">Sanctuary</button>
+                        <button type="button" class="btn btn-light">Trekking</button>
+                        <button type="button" class="btn btn-light">Forest</button>
+                        <button type="button" class="btn btn-light">Kannur</button>
+                        <button type="button" class="btn btn-light">Malabar</button>
+                        </div>
+                       </div>
+                       </div>
+                            
+                        <div class="container">
+                            <div class="row">
+                        <div class="col-md-3">
+                            <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+                        </div>
+                    </div>
+                </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="card" style="width: 10rem;">
+                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2106-profile-4294-20180704181109.jpg" class="card-img-top" alt="...">
+                                        
+                                            <div class="card-body">
+                                              <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                              </div>
+                                          </div>
+                                          </div>
+                                          <div class="col-md-2">
+                                          <div class="card" style="width: 10rem;">
+                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-3969-profile-19437-20181221075613.jpg" class="card-img-top" alt="...">
+                                        
+                                            <div class="card-body">
+                                              <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                              </div>
+                                              </div>
+                                              </div>
+                                              <div class="col-md-2">
+                                              <div class="card" style="width: 10rem;">
+                                                <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2052-profile-14294-20181012090236.jpg" class="card-img-top" alt="...">
+                                            
+                                                <div class="card-body">
+                                                  <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                    Park ho</a>
+                                                  <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                                  <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                        </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-5">
+                                                                <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                        </div>
+                                                        </div>
+                                                        <div id="googleMap">
+                                                            <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                        </div>
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-9">
+                                                                    <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                                   
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                  yes
+                                                                        </label>
+                                                                        </div>
+                                                                      
+                                                                        <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                 No
+                                                                        </label>
+                                                                      </div>
+                                                                      <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                      For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                    </div>
+                            
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                    <div class="col-md-12">
+                                                                <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+                                          
+                                                                    <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Fantasy Park - an amusement park in Malampuzha</h1>
+                                                                   </div>
+                                                                   </div>
+                                                                   </div>
+                                                                 </div>
+                                                                 <div class="container">
+                                                                    <div class="row">
+                                                                    <div class="col-md-8">
+                                                                 <nav aria-label="breadcrumb">
+                                                                    <ol class="breadcrumb">
+                                                                      <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                                                      <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                                                      </a></li>
+                                                                      <li class="breadcrumb-item active"><a href="beaches.html">Picnic Spots
+                                                      
+                                                                      </a></li>
+                                                                      <li class="breadcrumb-item" aria-current="page">Fantasy Park - an amusement park in MalampuzhaBeach</li>
+                                                                    </ol>
+                                                                  </nav>
+                                                                  </div>
+                                                                  </div>
+                                                                  </div>
+                                                                
+                                                                <div class="container">>
+                                                                <div class="row">
+                                                                <div class="col-md-9">
+                                                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                                                        <div class="carousel-inner">
+                                                                          <div class="carousel-item active">
+                                                                            <img src="https://www.keralatourism.org/images/destination/large/fantasy_park_an_amusement_park_in_malampuzha20150213085232_142_1.jpg" class="d-block w-100" alt="...">
+                                                                          
+                                                                              <p>Fantasy Park is among the finest amusement parks in Kerala, with the magnificent Western Ghats acting as the backdrop. Located in Malampuzha in Palakkad district, one gets to enjoy a wide range of rides here. People love the water exhibits in this well-maintained park. The land rides are famous as well and some of the fan-favourites include Super Splash, Harakirri, Zip Zap Zoop, Striking Car, Para Trooper, Dragon Coaster and the Pirate Boat. The Wave Pool is among the biggest in Kerala and is among the most crowded spots in the entire park.</p> 
+                                                                              <p>Along with rides like Water Blasters and gigantic water tubes, one can even take a heavenly dip in the Malampuzha Falls itself.  A visit here is incomplete without visiting the majestic planetarium, where young and old can together gaze in awe at the stars.</p>
+                                                                              <p>Visiting Hours:  10:00 to 19:00 hrs.</p>
+                                                                              <h1 class="team" style="font-size: 20px;">Contact Address:</h1>
+                          <p>For More Details</p>
+                          <p>Neo Tech Amusements & Resorts (P) Ltd</p>
+                          <p>8/585, Malampuzha, Palakkad - 678 651.</p>
+                          <p>Ph.: +91 491 2815122, 2815123</p>
+                          
+                          <p>E-mail: ww-aralam@forest.kerala.gov.in</p>
+                        
+                          <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                          <p>Nearest railway station: Palakkad, about 10 km</p>
+                          <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>     
+                                                                            
+                                                                              </div>
+                                                                              </div>
+                                                                              </div>
+                                                                             </div>
+                                                                             </div>
+                                                                             </div>
+                                                                                      
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <button type="button" class="btn btn-light">wildlife</button>
+                        <button type="button" class="btn btn-light">park</button>
+                        <button type="button" class="btn btn-light">picnic spot</button>
+                        <button type="button" class="btn btn-light">palakad</button>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                        <div class="col-md-3">
+                            <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+                        </div>
+                    </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="card" style="width: 10rem;">
+                                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2418-Room-16525-20181120101436.jpg" class="card-img-top" alt="...">
+                                    
+                                        <div class="card-body">
+                                          <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                      <div class="card" style="width: 10rem;">
+                                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-5086-profile-26065-20210920021629.JPG" class="card-img-top" alt="...">
+                                    
+                                        <div class="card-body">
+                                          <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          <div class="row">
+                                          <div class="col-md-2">
+                                          <div class="card" style="width: 10rem;">
+                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-5074-profile-25821-20210813041626.jpg" class="card-img-top" alt="...">
+                                        
+                                            <div class="card-body">
+                                              <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                Park ho</a>
+                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                              </div>
+                                              </div>
+                                              </div>
+                                              <div class="col-md-2">
+                                                <div class="card" style="width: 10rem;">
+                                                  <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2260-profile-19236-20181218092824.jpg" class="card-img-top" alt="...">
+                                              
+                                                  <div class="card-body">
+                                                    <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                      Park ho</a>
+                                                    <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                              </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                    </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                    </div>
+                                                    </div>
+                                                    <div id="googleMap">
+                                                        <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                    </div>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-9">
+                                                                <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                               
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                              yes
+                                                                    </label>
+                                                                    </div>
+                                                                  
+                                                                    <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                             No
+                                                                    </label>
+                                                                  </div>
+                                                                  <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                  For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                </div>
+                        
+                                                            </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                <div class="col-md-12">
+                                                            <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+                                      
+                                                                <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Thiruvalathoor in Palakkad</h1>
+                                                               </div>
+                                                               </div>
+                                                               </div>
+                                                             </div>
+                                                             <div class="container">
+                                                                <div class="row">
+                                                                <div class="col-md-8">
+                                                             <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                  <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                                                  <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                                                  </a></li>
+                                                                  <li class="breadcrumb-item active"><a href="beaches.html"> Pilgrim Centres
+                                                  
+                                                                  </a></li>
+                                                                  <li class="breadcrumb-item" aria-current="page">Thiruvalathoor in Palakkad</li>
+                                                                </ol>
+                                                              </nav>
+                                                              </div>
+                                                              </div>
+                                                              </div>
+                                                              <div class="container">>
+                                                                <div class="row">
+                                                                <div class="col-md-9">
+                                                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                                                        <div class="carousel-inner">
+                                                                          <div class="carousel-item active">
+                                                                            <img src="https://www.keralatourism.org/images/destination/large/thiruvalathoor_in_palakkad20150218085433_143_1.jpg" class="d-block w-100" alt="...">
+                                                                          
+                                                                              <p>he ancient temple at Thiruvalathoor in Palakkad district has some fine woodwork and stone sculptures. Legend has it that the outer wall of the temple was built by an army of gods who worked at it the whole night but left it unfinished by dawn as they didn’t want to be seen by humans. Despite efforts later on, the work could not be completed and it is believed that humans cannot complete this work.</p> 
+                                                                              <p>he ancient temple at Thiruvalathoor in Palakkad district has some fine woodwork and stone sculptures. Legend has it that the outer wall of the temple was built by an army of gods who worked at it the whole night but left it unfinished by dawn as they didn’t want to be seen by humans. Despite efforts later on, the work could not be completed and it is believed that humans cannot complete this work..</p>
+                                                                              
+                          
+                        
+                          <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                          <p>Nearest railway station: Palakkad, about 10 km</p>
+                          <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>     
+                                                                            
+                                                                              </div>
+                                                                              </div>
+                                                                              </div>
+                                                                             </div>
+                                                                             </div>
+                                                                             </div>
+                                                                                      
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                   
+                        <button type="button" class="btn btn-light">Temple</button>
+                        <button type="button" class="btn btn-light">pilgrim center</button>
+                        <button type="button" class="btn btn-light">palakad</button>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                        <div class="col-md-3">
+                            <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+                        </div>
+                    </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="card" style="width: 10rem;">
+                                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-3410-profile-9307-20180807073355.jpg" class="card-img-top" alt="...">
+                                    
+                                        <div class="card-body">
+                                          <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="col-md-2">
+                                      <div class="card" style="width: 10rem;">
+                                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2206-profile-14345-20181015080646.jpg" class="card-img-top" alt="...">
+                                    
+                                        <div class="card-body">
+                                          <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          <div class="row">
+                                          <div class="col-md-2">
+                                          <div class="card" style="width: 10rem;">
+                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-298-profile-11426-20180903093519.jpg" class="card-img-top" alt="...">
+                                        
+                                            <div class="card-body">
+                                              <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                Park ho</a>
+                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                              </div>
+                                              </div>
+                                              </div>
+                                              <div class="col-md-2">
+                                                <div class="card" style="width: 10rem;">
+                                                  <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-3747-profile-16139-20181114105605.jpg" class="card-img-top" alt="...">
+                                              
+                                                  <div class="card-body">
+                                                    <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                      Park ho</a>
+                                                    <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                              </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                    </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                    </div>
+                                                    </div>
+                                                    <div id="googleMap">
+                                                        <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                    </div>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-9">
+                                                                <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                               
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                              yes
+                                                                    </label>
+                                                                    </div>
+                                                                  
+                                                                    <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                             No
+                                                                    </label>
+                                                                  </div>
+                                                                  <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                  For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                </div>
+                        
+                                                            </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                <div class="col-md-12">
+                                                            <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+                                      
+                                                                <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Kottayi - the birth place of Chembai Vaidyanatha Bhagavathar
+                                                                </h1>
+                                                               </div>
+                                                               </div>
+                                                               </div>
+                                                             </div>
+                                                             <div class="container">
+                                                                <div class="row">
+                                                                <div class="col-md-8">
+                                                             <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                  <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                                                  <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                                                  </a></li>
+                                                                  <li class="breadcrumb-item active"><a href="beaches.html"> Places of Interest
+                                                  
+                                                                  </a></li>
+                                                                  <li class="breadcrumb-item" aria-current="page">Kottayi - the birth place of Chembai Vaidyanatha Bhagavathar</li>
+                                                                </ol>
+                                                              </nav>
+                                                              </div>
+                                                              </div>
+                                                              </div>
+                                                              <div class="container">>
+                                                                <div class="row">
+                                                                <div class="col-md-9">
+                                                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                                                        <div class="carousel-inner">
+                                                                          <div class="carousel-item active">
+                                                                            <img src="https://www.keralatourism.org/images/destination/large/thiruvalathoor_in_palakkad20150218085433_143_1.jpg" class="d-block w-100" alt="...">
+                                                                          
+                                                                              <p>Kottayi village is the native place of the Chembai Vaidyanatha Bhagavathar, the doyen of Carnatic music. The place hosts the annual Chembai Parthasarathy Ekadasi Music festival in memory of the great singer in February/March. Renowned singers perform music concerts during the festival.k.</p> 
+                                                                             
+                                                                              
+                          
+                        
+                          <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                          <p>Nearest railway station: Palakkad, about 10 km</p>
+                          <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>     
+                                                                            
+                                                                              </div>
+                                                                              </div>
+                                                                              </div>
+                                                                             </div>
+                                                                             </div>
+                                                                             </div>
+                                                                             <div class="container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-5">
+                                                                                            <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    <div id="googleMap">
+                                                                                        <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                                                    </div>
+                                                                                    <div class="container">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-9">
+                                                                                                <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                                                               
+                                                                                                <div class="form-check">
+                                                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                                                              yes
+                                                                                                    </label>
+                                                                                                    </div>
+                                                                                                  
+                                                                                                    <div class="form-check">
+                                                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                                                             No
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                                                  For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                                                </div>
+                                                        
+                                                                                            </div>
+                                                                                            </div>
+                                                                                            </div>
+                                                                                            <div class="container">
+                                                                                                <div class="row">
+                                                                                                <div class="col-md-12">
+                                                                                            <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+                                                                      
+                                                                                                <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Kollengode - the abode of blacksmiths</h1>
+                                                                                                </h1>
+                                                                                               </div>
+                                                                                               </div>
+                                                                                               </div>
+                                                                                             </div>
+                                                                                             <div class="container">
+                                                                                                <div class="row">
+                                                                                                <div class="col-md-8">
+                                                                                             <nav aria-label="breadcrumb">
+                                                                                                <ol class="breadcrumb">
+                                                                                                  <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                                                                                  <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                                                                                  </a></li>
+                                                                                                  <li class="breadcrumb-item active"><a href="beaches.html">Places of Interest
+                                                                                  
+                                                                                                  </a></li>
+                                                                                                  <li class="breadcrumb-item" aria-current="page">Kollengode - the abode of blacksmiths</li>
+                                                                                                </ol>
+                                                                                              </nav>
+                                                                                              </div>
+                                                                                              </div>
+                                                                                              </div>
+                                                                                            
+                                                                                            <div class="container">
+                                                                                            <div class="row">
+                                                                                            <div class="col-md-9">
+                                                                                                
+                                                                                                      
+                                                                                                          <p>Palakkad, known as the granary of Kerala, is a land of palms and paddy fields. And Kollengode enshrines the pristine beauty of rural Palakkad. The village gets its name from the blacksmith (Kollen) community who live here.</p> 
+                                                                                                          <p>The Kollengode Palace built in the traditional architectural style and a shrine dedicated to Lord Vishnu are the major attractions here</p>
+                                                                                                          <p>Seethakundu and Govindamalai near Kaachankurichi are ideal locales for adventure trekking.</p>
+                                                                                                          <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                                                                                                          <p>Nearest railway station: Palakkad, about 10 km</p>
+                                                                                  <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>
+                                                                                                        
+                                                                                                          </div>
+                                                                                                          </div>
+                                                                                                          </div>
+                                                                                                         </div>
+                                                                                                         </div>
+                                                                                                         </div>
+                                                                                                         <div class="container">
+                                                                                                            <div class="row">
+                                                                                                        <div class="col-md-3">
+                                                                                                            <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="container">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-2">
+                                                                                                                <div class="card" style="width: 10rem;">
+                                                                                                                    <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-5527-Facilities-28775-20230109105532.jpg" class="card-img-top" alt="...">
+                                                                                                                
+                                                                                                                    <div class="card-body">
+                                                                                                                      <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                                                                                                      <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                                  </div>
+                                                                                                                  <div class="col-md-2">
+                                                                                                                  <div class="card" style="width: 10rem;">
+                                                                                                                    <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2205-profile-19241-20181219063414.jpg" class="card-img-top" alt="...">
+                                                                                                                
+                                                                                                                    <div class="card-body">
+                                                                                                                      <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                                                                                                      <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                      </div>
+                                                                                                                      </div>
+                                                                                                                   </div>
+                                                                                                                   <div class="row">
+                                                                                                                        <div class="col-md-2">
+                                                                                                                            <div class="card" style="width: 10rem;">
+                                                                                                                                <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-3965-profile-19398-20181221045653.jpg" class="card-img-top" alt="...">
+                                                                                                                            
+                                                                                                                                <div class="card-body">
+                                                                                                                                  <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                                                                                                                  <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                  </div>
+                                                                                                                              </div>
+                                                                                                                             </div>
+                                                                                                                              <div class="col-md-2">
+                                                                                                                              <div class="card" style="width: 10rem;">
+                                                                                                                                <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2090-profile-14358-20181015083339.jpg" class="card-img-top" alt="...">
+                                                                                                                            
+                                                                                                                                <div class="card-body">
+                                                                                                                                  <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                                                                                                                  <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                      </div>
+                                                                                                                      </div>
+                                                                                                                      <div class="container">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-md-3">
+                                                                                                                                <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                                                                                            </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="row">
+                                                                                                                                <div class="col-md-5">
+                                                                                                                                    <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                                                                                            </div>
+                                                                                                                            </div>
+                                                                                                                            <div id="googleMap">
+                                                                                                                                <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                                                                                            </div>
+                                                                                                                            <div class="container">
+                                                                                                                                <div class="row">
+                                                                                                                                    <div class="col-md-9">
+                                                                                                                                        <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                                                                                                       
+                                                                                                                                        <div class="form-check">
+                                                                                                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                                                                                      yes
+                                                                                                                                            </label>
+                                                                                                                                            </div>
+                                                                                                                                          
+                                                                                                                                            <div class="form-check">
+                                                                                                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                                                                                     No
+                                                                                                                                            </label>
+                                                                                                                                          </div>
+                                                                                                                                          <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                                                                                          For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                                                                                        </div>
+                                                                                                
+                                                                                                                                    </div>
+                                                                                                                                    </div>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="container">
+                                                                                                                                        <div class="row">
+                                                                                                                                        <div class="col-md-12">
+                                                                                                                                    <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+                                                                                                              
+                                                                                                                                        <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Ottappalam</h1>
+                                                                                                                                       </div>
+                                                                                                                                       </div>
+                                                                                                                                       </div>
+                                                                                                                                     </div>
+                                                                                                                                     <div class="container">
+                                                                                                                                        <div class="row">
+                                                                                                                                        <div class="col-md-8">
+                                                                                                                                     <nav aria-label="breadcrumb">
+                                                                                                                                        <ol class="breadcrumb">
+                                                                                                                                          <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                                                                                                                          <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                                                                                                                          </a></li>
+                                                                                                                                          <li class="breadcrumb-item active"><a href="beaches.html"> Places of Interest
+                                                                                                                          
+                                                                                                                                          </a></li>
+                                                                                                                                          <li class="breadcrumb-item" aria-current="page">Ottappalam</li>
+                                                                                                                                        </ol>
+                                                                                                                                      </nav>
+                                                                                                                                      </div>
+                                                                                                                                      </div>
+                                                                                                                                      </div>
+                                                                                                                                    
+                                                                                                                                    <div class="container">>
+                                                                                                                                    <div class="row">
+                                                                                                                                    <div class="col-md-9">
+                                                                                                                                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                                                                                                                            <div class="carousel-inner">
+                                                                                                                                              <div class="carousel-item active">
+                                                                                                                                                <img src="https://www.keralatourism.org/images/destination/large/varikkasseri_mana20140412063739_148_1.jpg" class="d-block w-100" alt="...">
+                                                                                                                                              
+                                                                                                                                                  <p>Located 35 km from Palakkad town, Ottappalam is famous for its numerous places of worship and colourful festivals. It is also home to the famous Varikkasseri Mana, where Malayalam films are shot almost round the year. The colourful Chinakkathoor Pooram is held annually at the Sree Chinakkathoor Bhagavathy Temple in Palappuram near Ottapalam..</p> 
+                                                                                                                                                  <h1 class="team" style="font-size: 20px;">Getting there</h1>
+                                                                                                                                                  <p>Nearest railway station: Palakkad, about 10 km</p>
+                                                                                                                          <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>
+                                                                                                                                                
+                                                                                                                                                  </div>
+                                                                                                                                                  </div>
+                                                                                                                                                  </div>
+                                                                                                                                                 </div>
+                                                                                                                                                 </div>
+                                                                                                                                                 </div>
+                                                                                                                                                 
+                                                                                                                                        <div class="container">
+                                                                                                                                            <div class="row">
+                                                                                                                                                <div class="col-9">
+                                                                                                                                                    <button type="button" class="btn btn-light">palakkad</button>
+                                                                                                                        <button type="button" class="btn btn-light">village</button>
+                                                                                                                        <button type="button" class="btn btn-light">festival</button>
+                                                                                                                        <button type="button" class="btn btn-light">Temple</button>
+                                                                                                                        
+                                                                                                                        </div>
+                                                                                                                       </div>
+                                                                                                                       </div>
+                                                                                                                            
+                                                                                                                        <div class="container">
+                                                                                                                            <div class="row">
+                                                                                                                        <div class="col-md-3">
+                                                                                                                            <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                            <div class="container">
+                                                                                                                                <div class="row">
+                                                                                                                                    <div class="col-md-2">
+                                                                                                                                        <div class="card" style="width: 10rem;">
+                                                                                                                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-3526-profile-22481-20190719122530.jpg" class="card-img-top" alt="...">
+                                                                                                                                        
+                                                                                                                                            <div class="card-body">
+                                                                                                                                              <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                                                                                                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                              </div>
+                                                                                                                                          </div>
+                                                                                                                                          </div>
+                                                                                                                                          <div class="col-md-2">
+                                                                                                                                          <div class="card" style="width: 10rem;">
+                                                                                                                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-2232-profile-14492-20181016065143.jpg" class="card-img-top" alt="...">
+                                                                                                                                        
+                                                                                                                                            <div class="card-body">
+                                                                                                                                              <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                                                                                                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                              </div>
+                                                                                                                                              </div>
+                                                                                                                                              </div>
+                                                                                                                                              <div class="col-md-2">
+                                                                                                                                              <div class="card" style="width: 10rem;">
+                                                                                                                                                <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-45-profile-6329-20180714111223.jpg" class="card-img-top" alt="...">
+                                                                                                                                            
+                                                                                                                                                <div class="card-body">
+                                                                                                                                                  <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                                                                                                                    Park ho</a>
+                                                                                                                                                  <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                                  </div>
+                                                                                                                                                  </div>
+                                                                                                                                                  </div>
+                                                                                                                                                  </div>
+                                                                                                                                                  <div class="container">
+                                                                                                                                                    <div class="row">
+                                                                                                                                                        <div class="col-md-3">
+                                                                                                                                                            <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                                                                                                                        </div>
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="row">
+                                                                                                                                                            <div class="col-md-5">
+                                                                                                                                                                <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                                                                                                                        </div>
+                                                                                                                                                        </div>
+                                                                                                                                                        <div id="googleMap">
+                                                                                                                                                            <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="container">
+                                                                                                                                                            <div class="row">
+                                                                                                                                                                <div class="col-md-9">
+                                                                                                                                                                    <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                                                                                                                                   
+                                                                                                                                                                    <div class="form-check">
+                                                                                                                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                                                                                                                  yes
+                                                                                                                                                                        </label>
+                                                                                                                                                                        </div>
+                                                                                                                                                                      
+                                                                                                                                                                        <div class="form-check">
+                                                                                                                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                                                                                                                 No
+                                                                                                                                                                        </label>
+                                                                                                                                                                      </div>
+                                                                                                                                                                      <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                                                                                                                      For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                                                                                                                    </div>
+                                                                                                                            
+                                                                                                                                                                </div>
+                                                                                                                                                                </div>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="container">
+                                                                                                                                                                    <div class="row">
+                                                                                                                                                                    <div class="col-md-12">
+                                                                                                                                                                <div class="bg-text" style="background-color: rgb(9, 9, 137);">
+                                                                                                                                          
+                                                                                                                                                                    <h1 class="water" style="text-align: left;font-size: 20px;color: white;width: 100%;">Thrithala, Palakkad</h1>
+                                                                                                                                                                   </div>
+                                                                                                                                                                   </div>
+                                                                                                                                                                   </div>
+                                                                                                                                                                 </div>
+                                                                                                                                                                 <div class="container">
+                                                                                                                                                                    <div class="row">
+                                                                                                                                                                    <div class="col-md-8">
+                                                                                                                                                                 <nav aria-label="breadcrumb">
+                                                                                                                                                                    <ol class="breadcrumb">
+                                                                                                                                                                      <li class="breadcrumb-item"><a href="kerala.html">Home</a></li>
+                                                                                                                                                                      <li class="breadcrumb-item active"><a href="beaches.html">Where to go
+                                                                                                                                                                      </a></li>
+                                                                                                                                                                      <li class="breadcrumb-item active"><a href="beaches.html"> Places of Interest
+                                                                                                                                                      
+                                                                                                                                                                      </a></li>
+                                                                                                                                                                      <li class="breadcrumb-item" aria-current="page">OThrithala, Palakkad</li>
+                                                                                                                                                                    </ol>
+                                                                                                                                                                  </nav>
+                                                                                                                                                                  </div>
+                                                                                                                                                                  </div>
+                                                                                                                                                                  </div>
+                                                                                                                                                                
+                                                                                                                                                                <div class="container">
+                                                                                                                                                                <div class="row">
+                                                                                                                                                                <div class="col-md-9">
+                                                                                                                                                                  
+                                                                                                                                                                          
+                                                                                                                                                                          
+                                                                                                                                                                              <p>Thrithala is noted for its monuments and historic ruins and hence, has great archaeological importance. The ruins of a large mud fort with a deep moat hewn from laterite and the Siva temple are notable cultural monuments.</p> 
+                                                                                                                                                                              <p>The Kattil Madom Temple, a domed structure made of granite slabs, on the Pattambi-Guruvayoor road is a Buddhist monument believed to date back to the 9th or 10th century. The temple probably marks the transition from the Chola to the Pandya style of architecture</p>
+                                                                                                                                                                              <p>The Paakkanaar memorial, a tribute to the Pariah saint, stands near the Thrithala-Koottanad road. This is also the native place of renowned writer and social worker V. T. Bhattathiripad.</p>
+                                                                                                                                                                              <h1 class="team" style="font-size: 20px;">Getting there</h1>
+
+                                                                                                                                                                              <p>Nearest railway station: Palakkad, about 10 km</p>
+                                                                                                                                                      <p>Nearest airport: Coimbatore International Airport in Tamil Nadu, about 65 km | Calicut International Airport, about  105 km | Cochin International Airport, about 115 km</p>
+                                                                                                                                                                            
+                                                                                                                                                                             
+                                                                                                                                                                              </div>
+                                                                                                                                                                             </div>
+                                                                                                                                                                             </div>
+                                                                                                                                                                             </div>
+                                                                                                                                                                    
+                                                                                                                                                        
+                                                                                                                                                    <div class="container">
+                                                                                                                                                        <div class="row">
+                                                                                                                                                    <div class="col-md-3">
+                                                                                                                                                        <h2 class="team" style="font-size: 20px;">Where to Stay</h2>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                                        <div class="container">
+                                                                                                                                                            <div class="row">
+                                                                                                                                                                <div class="col-md-2">
+                                                                                                                                                                    <div class="card" style="width: 10rem;">
+                                                                                                                                                                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-4826-profile-24661-20200801110524.jpg" class="card-img-top" alt="...">
+                                                                                                                                                                    
+                                                                                                                                                                        <div class="card-body">
+                                                                                                                                                                          <a class="card-title" style="text-decoration: none;" href="#">GAYATHRI HOTELS</a>
+                                                                                                                                                                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                                                          </div>
+                                                                                                                                                                      </div>
+                                                                                                                                                                      </div>
+                                                                                                                                                                      <div class="col-md-2">
+                                                                                                                                                                      <div class="card" style="width: 10rem;">
+                                                                                                                                                                        <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-4629-profile-23964-20200303051817.jpg" class="card-img-top" alt="...">
+                                                                                                                                                                    
+                                                                                                                                                                        <div class="card-body">
+                                                                                                                                                                          <a class="card-title" style="text-decoration: none;" href="#">Queens Tourist Home</a>
+                                                                                                                                                                          <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                                                          </div>
+                                                                                                                                                                          </div>
+                                                                                                                                                                          </div>
+                                                                                                                                                                          <div class="col-md-2">
+                                                                                                                                                                          <div class="card" style="width: 10rem;">
+                                                                                                                                                                            <img src="https://www.keralatourism.org/images/service-providers/photos/thumb/property-45-profile-6329-20180714111223.jpg" class="card-img-top" alt="...">
+                                                                                                                                                                        
+                                                                                                                                                                            <div class="card-body">
+                                                                                                                                                                              <a class="card-title" style="text-decoration: none;" href="#">The North 
+                                                                                                                                                                                Park ho</a>
+                                                                                                                                                                              <p class="card-text" style="color: black;"> 490-2416666 2412888</p>
+                                                                                                                                                                              </div>
+                                                                                                                                                                              </div>
+                                                                                                                                                                              </div>
+                                                                                                                                                                              </div>
+                                                                                                                                                                              <div class="container">
+                                                                                                                                                                                <div class="row">
+                                                                                                                                                                                    <div class="col-md-3">
+                                                                                                                                                                                        <h2 class="team" style="font-size: 20px;">Location</h2>   
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="row">
+                                                                                                                                                                                        <div class="col-md-5">
+                                                                                                                                                                                            <p>Latitude: 11.93857, Longitude: 75.845375</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div id="googleMap">
+                                                                                                                                                                                        <iframe class="g-map" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11.588426,75.582626&amp;aq=&amp;sll=11.588426,76.128318&amp;sspn=7.663117,9.876709&amp;ie=UTF8&amp;ll=11.588426,75.582626&amp;spn=0.0596,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="container">
+                                                                                                                                                                                        <div class="row">
+                                                                                                                                                                                            <div class="col-md-9">
+                                                                                                                                                                                                <p>Do you wish to add content or help us find mistakes in this web page?</p>
+                                                                                                                                                                                               
+                                                                                                                                                                                                <div class="form-check">
+                                                                                                                                                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                                                                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                                                                                                                                                              yes
+                                                                                                                                                                                                    </label>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                    <div class="form-check">
+                                                                                                                                                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                                                                                                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                                                                                                                                                             No
+                                                                                                                                                                                                    </label>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <p>NB: You should not submit anything else other than addition / correction of page content</p>
+                                                                                                                                                                                                  For travel related requirements like accommodation, tour packages, transportation etc please<span><a href="#">click here</a></span>
+                                                                                                                                                                                                </div>
+                                                                                                                                                        
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            <div class="container">
+                                                                                                                                                                                                <div class="row">
+                                                                                                                                                                                                  <div class="col-xl-2">
+                                                                                                                                                                                                    <div class="">
+                                                                                                                                                                                                      <h4>Explore</h4>
+                                                                                                                                                                                                      <ul class="list-unstyled">
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Classification Schemes</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Governmental Affairs</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Media Room</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Tourism Events</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Maps</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Site Map</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class="col-xl-2">
+                                                                                                                                                                                                    <div class="">
+                                                                                                                                                                                                      <h4>Travel Hub</h4>
+                                                                                                                                                                                                      <ul class="list-unstyled">
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Kerala at a Glance</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Travel Care</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Where to Stay</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">How to?</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Travel Tips</a>
+                                                                                                                                                                                                       
+                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class="col-xl-2">
+                                                                                                                                                                                                    <div class="">
+                                                                                                                                                                                                      <h4>Nature</h4>
+                                                                                                                                                                                                      <ul class="list-unstyled">
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Hills</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Backwaters</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Beaches</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Wildlife</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Waterfalls</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        
+                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class="col-xl-2">
+                                                                                                                                                                                                    <div class="">
+                                                                                                                                                                                                      <h4>Places</h4>
+                                                                                                                                                                                                      <ul class="list-unstyled">
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Munnar</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Wayanad</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Kovalam</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Periyar</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Varkala</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        
+                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class="col-xl-2">
+                                                                                                                                                                                                    <div class="">
+                                                                                                                                                                                                      <h4>Specialities</h4>
+                                                                                                                                                                                                      <ul class="list-unstyled">
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Ayurveda</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Monsoon</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Houseboat</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Kerala Food</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Festivals</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                       
+                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class="col-xl-2">
+                                                                                                                                                                                                    <div class="">
+                                                                                                                                                                                                      <h4>Videos/Photos</h4>
+                                                                                                                                                                                                      <ul class="list-unstyled">
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Videos</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Photos</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">360° Videos</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Royalty Free Photos</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                          <a href="#" class="text-decoration-none" style="color: #000;">Wallpapers</a>
+                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                        
+                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                            
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                <div class="container">
+                                                                                                                                                                                                <div class="row">
+                                                                                                                                                                                                <div class="col-6">
+                                                                                                                                                                                                  <div>
+                                                                                                                                                                                                    <h4>Subscribe Our Newsletter</h4>
+                                                                                                                                                                                                    <div>
+                                                                                                                                                                                                      <label for="Newsletter" class="form-label">Get notified to Kerala Tourism events and activities
+                                                                                                                                                                                                      </label>
+                                                                                                                                                                                                      <input type="text" class="form-control" Placeholder="Enter Your Email">
+                                                                                                                                                                                                      
+                                                                                                                                                                                                      <button class="btn btn-danger mt-3">Subscribe</button>
+                                                                                                                                                                                                      
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                    
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                <div class="bg-light" style="text-align: center;">
+                                                                                                                                                                                                  <button type="button" class="btn btn-danger " style="text-align: center;font-size: 15px;font-weight: bold;">RECRUTMENT></button>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                <div class="container">
+                                                                                                                                                                                                  <div class="row">
+                                                                                                                                                                                                    <div class="col-2">
+                                                                                                                                                                                            
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                    <div class="col-8">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/dtpc.png">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/ktdc.jpg">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/teps.jpg">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/brdc-logo.png">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/sargaalaya-logo.png">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/sihmk.jpg">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/responsible-tourism.jpg">
+                                                                                                                                                                                                      <img src="https://www.keralatourism.org/images/kitts.jpg">
+                                                                                                                                                                                                     
+                                                                                                                                                                                                      
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class="container">
+                                                                                                                                                                                                    <div class="row" style="margin-top: 30px;">
+                                                                                                                                                                                                      <div class="col-2">
+                                                                                                                                                                                            
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                      <div class="col-8">
+                                                                                                                                                                                            <p>Toll free No: 1-800-425-4747 (Within India only)</p>
+                                                                                                                                                                                            <p>Department of Tourism, Park View, Thiruvananthapuram, Kerala, India-695 033</p>
+                                                                                                                                                                                            Phone: +91 471 2321132 E-mail:<span><a class="info" style="text-decoration: none;" href="#"> info@keralatourism.org.</a></span>
+                                                                                                                                                                                            All rights reserved © Kerala Tourism 2023.<span><a href="#">Copyright | Terms of Use | Cookie Policy | Contact Us. </a></span>
+                                                                                                                                                                                            <p>Developed & Maintained by Invis.</p>
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                      <div class="col-2">
+                                                                                                                                                                                            
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
+                            
+                                                                                                                                     
+                                                                                                                  
+                                                                                        
+                            
+
+                                                                                                         
+                                                                                      
+                                                            
